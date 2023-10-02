@@ -48,7 +48,7 @@ export const emailValidation =()=> {
                 unikue:async(value:string)=> {
                        //sends rekuest only when email is valid       
                        try{
-                           const res=await axios.get(`http://localhost:5000/user/checkEmail/${value}`)
+                           const res=await axios.get(`https://assess.onrender.com/user/checkEmail/${value}`)
                            console.log(res.data)
                            if(res.data?.length>0)
                            {

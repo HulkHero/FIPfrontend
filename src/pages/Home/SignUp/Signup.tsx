@@ -35,7 +35,7 @@ const Signup = () => {
         setLoading(true);
        
 
-        const res= await axios.get(`http://localhost:5000/user/getCompanyName/${data.companyName}`)
+        const res= await axios.get(`https://assess.onrender.com/getCompanyName/${data.companyName}`)
         console.log(res.data.companyName,"res.data")
         if(res.status===200&&res.data.companyName){
             toast.error("Company Name already exists")
@@ -69,7 +69,7 @@ const Signup = () => {
           "Content-Type":"application/json"
         }
         console.log(item,"item");
-        const response=await fetch("http://localhost:5000/user/payment",{
+        const response=await fetch("https://assess.onrender.com/user/payment",{
           method:"POST",
           headers:header,
           body:JSON.stringify(item)

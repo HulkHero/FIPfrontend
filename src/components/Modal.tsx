@@ -22,7 +22,7 @@ const Modal = ({variant,title,description,buttonText,linkPath,linkText,goBack}: 
     <dialog id="success" className="modal">
       <div className="modal-box">
         <h3 className="font-bold text-lg text-success">{title}</h3>
-        <p className="py-4">{description}</p>
+        <p className="py-4 text-black">{description}</p>
         <div className="modal-action">
           <form method="dialog">
             {/* if there is a button in form, it will close the modal */}
@@ -41,7 +41,7 @@ const Modal = ({variant,title,description,buttonText,linkPath,linkText,goBack}: 
     <dialog id="error" className=" modal">
       <div className="modal-box">
         <h3 className="font-bold text-lg text-error">{title}</h3>
-        <p className="py-4">{description}</p>
+        <p className="py-4 text-black">{description}</p>
         <div className="modal-action">
           <form method="dialog">
           {linkPath? <Link to={linkPath} className='btn btn-error'>

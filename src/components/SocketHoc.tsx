@@ -16,7 +16,7 @@ const withSocket = <P extends object>(WrappedComponent: React.ComponentType<P & 
         console.log(user._id)
 
         useEffect(() => {
-            socketRef.current = io('ws://localhost:8800');
+            socketRef.current = io('ws://https://assess.onrender.com/:8800');
             socketRef.current.emit("new-user-add", user._id);
             socketRef.current.on("get-users", (users) => {
                console.log(users,"users")

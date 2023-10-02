@@ -12,7 +12,7 @@ const PaymentSuccess = () => {
         const navigate=useNavigate();
         const [data,setData]=React.useState<userSignUp>();
 
-        const {mutate,isLoading}=useMutation((data:userSignUp)=>axios.post(`http://localhost:5000/user/signup`,data),{
+        const {mutate,isLoading}=useMutation((data:userSignUp)=>axios.post(`https://assess.onrender.com/user/signup`,data),{
             onSuccess:(data)=>{
                 navigate("/login");
             },

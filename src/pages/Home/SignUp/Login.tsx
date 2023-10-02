@@ -41,7 +41,7 @@ const Login = () => {
 
   const { register, handleSubmit, formState :{errors} } = form;
 
-  const {mutate,isLoading}=useMutation((data:ILogin)=>axios.post(`http://localhost:5000/user/login`,data),{
+  const {mutate,isLoading}=useMutation((data:ILogin)=>axios.post(`https://assess.onrender.com/user/login`,data),{
     onSuccess:(data)=>{
         localStorage.setItem("user",JSON.stringify(data.data.user));
         dispatch(addUser(data.data.user));
