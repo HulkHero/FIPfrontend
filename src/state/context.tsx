@@ -17,7 +17,7 @@ export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     const user=useAppSelector(authSelector)
 
     useEffect(() => {
-        socketRef.current= io('ws://https://assess.onrender.com/:8800'); 
+        socketRef.current= io('ws://assess.onrender.com'); 
         socketRef.current?.emit('new-user-add',{newUserId:user._id,companyName:user.companyName,systemRole:user.systemRole})
 
         if(socketRef.current){
